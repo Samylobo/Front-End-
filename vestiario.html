@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos de Vestuário - LoboStore</title>
+    <style>
+        /* Estilos CSS aqui */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .lobo {
+            color: crimson;
+        }
+
+        .store span {
+            color: white;
+        }
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #83837e;
+            padding: 53px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Posição do logo */
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            display: inline-block;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Estilos para a barra de pesquisa */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 60%;
+            max-width: 400px;
+            margin-top: 10px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .search-bar input[type="text"] {
+            width: 70%;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            background-color: #56e4e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilos para os elementos de navegação */
+        .nav-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-links li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #090909;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #df1010;
+        }
+
+        /* Estilos para o slider de imagens */
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #001f3f;
+        }
+
+        .slider-container .slide {
+            width: 100%;
+            display: none;
+        }
+
+        .slider-container img {
+            width: 100%;
+        }
+
+        /* Estilos para os produtos */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .imagem {
+            flex: 0 0 calc(33.33% - 20px);
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .imagem:hover {
+            transform: scale(1.1);
+        }
+
+        .imagem img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+
+        .descricao {
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        /* Rodapé */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media only screen and (max-width: 600px) {
+            .nav-links ul {
+                flex-direction: column;
+            }
+
+            .nav-links li {
+                flex: none;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            80% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><span class="lobo">LOBO</span><span class="store">STORE</span></h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Buscar</button>
+        </div>
+    </header>
+    <nav class="nav-links">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="tecnologias.html">Tecnologias</a></li>
+                <ul class="sub-menu">
+                <li><a href="tecnologias.html#celulares">celulares</a></li>
+                <li><a href="tecnologias.html#fones">fones</a></li>
+                <li><a href="tecnologias.html#computadores">computadores</a></li>
+                <!-- Adicione mais subcategorias conforme necessário -->
+                 </ul>
+                 
+    <section class="slider-container">
+        <div class="slide fade slideIn">
+            <img src="7ede50bc-dadb-4ae8-a3d1-35b5a93ed4d2.jpg" alt="Imagem 1">
+        </div>
+        <div class="slide fade">
+            <img src="Home.png" alt="Imagem 3">
+        </div>
+    </section>
+
+    <section class="container" id="imagens-container-bolsas">
+        <div class="imagem">
+            <img src="bolsa/Captura de tela 2024-01-13 151138.png" alt="Bolsa 2">
+            <div class="descricao">
+                <h2>Slim White</h2>
+                <p>Para apaixonadas por Bolsa Branca com bordas arredondadas e Alça fina.</p>
+                <span>R$ 99,99</span>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="imagem">
+            <img src="bolsa/Captura de tela 2024-01-13 150756.png" alt=" Bolsa 1 ">
+            <div class="descricao">
+                <h2>Travel soft</h2>
+                <p>Para apaixonadas por Bolsa Nude Pequena com Alça trabalhada com detalhes dourados.</p>
+                <span>R$ 99,99</span>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="imagem">
+            <img src="bolsa/Captura de tela 2024-01-13 151636.png" alt=" Bolsa 3 ">
+            <div class="descricao">
+                <h2> Blue Heart </h2>
+                <p> Para Amantes de Bolsas quadradas e estruturadas este modelo em Azul Claro tem designer pequeno com detalhes trabalhados na abertura , com alça de mão e acompanha alça comprida fina . </p>
+                <span>R$ 99,99</span>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <!-- Adicione mais produtos aqui conforme necessário -->
+    </section>
+</body>
+
+</html>

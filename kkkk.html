@@ -1,0 +1,435 @@
+
+<!-- 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoboStore</title>
+    <style> 
+       body {
+        font-family: ui-sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: cornflowerblue;
+        position: relative; /* Define o posicionamento relativo para o corpo */
+        margin-bottom: 100px; /* Corrigido o valor da margem inferior */
+        }
+        
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            color: #827a7a;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #0f0909;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 10px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #eee7e7;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            align-items:flex-start;
+            padding: 10px;
+        }
+
+        .imagem {
+            width: 200px;
+            height: 300px;
+            margin: 10px;
+            text-align:center;
+            display:flex;
+            align-items:center;
+            background-color: #c28711; /* Cor de fundo do quadrado */
+            border-radius: 10px; /* Arredonda as bordas do quadrado */
+            padding: 20px; /* Espaçamento interno do quadrado */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o quadrado */
+}
+        
+.quadro {
+    width: 100%; /* Corrigido o valor da largura */
+    height: 100%; /* Corrigido o valor da altura */
+    border: 2px solid #0f0d08; /* Cor da borda */
+    border-radius: 10px; /* Arredondamento das bordas */
+    overflow: hidden; /* Garante que o conteúdo dentro do quadrado não ultrapasse as bordas */
+    display:flex ;
+    flex-direction: column;
+}
+
+.quadro img {
+    width: 100%; /* Ajusta a largura da imagem para ocupar todo o espaço disponível dentro do quadrado */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px 10px 0 0;  /* Arredondamento das bordas da imagem */
+}
+
+.descricao {
+
+    border-radius: 0  0  10px 10px ; /* Arredondamento das bordas da imagem (somente no topo) */
+    padding: 15px; /* Espaçamento interno para a descrição */
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente para a descrição */
+    color: white; /* Cor do texto da descrição */
+}
+
+.imagem img {
+    width: 100%; /* Define a largura da imagem para preencher totalmente o quadrado */
+    height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção */
+    max-width: 150px; /* Define o tamanho máximo da largura da imagem */
+    max-height: 150px; /* Define o tamanho máximo da altura da imagem */
+    object-fit: cover; /* Redimensiona a imagem para cobrir totalmente o espaço disponível */
+    border-radius: 10px; /* Arredonda as bordas da imagem */
+    transition: transform 0.3s ease;
+}
+
+.imagem img:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem em 10% quando o mouse está sobre ela */
+}
+
+.Roupas, .Bolsas, .Perfumes {
+    display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            align-items: flex-start;
+            justify-content:  space-around;
+            background-color: #3e3e3c;
+            margin-right: 10px;
+        }
+.imagem:nth-child(n+5) {
+    display: none; 
+}
+              
+#ver-mais {
+    margin-top:20px;
+    text-align: center;
+    border: none;
+    background-color: #56e4e6;
+    color: rgb(240, 233, 239);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px; /* Arredonda as bordas do botão */
+    cursor: pointer;
+}
+
+/* Estilos para os produtos */
+
+
+@keyframes animacao {
+    10% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+footer {
+    position: fixed; /* Mantém o footer fixo na parte inferior da página */
+    bottom: 0; /* Alinha o footer na parte inferior da página */
+    left: 0; /* Alinha o footer à esquerda da página */
+    width: 100%; /* Define a largura do footer igual à largura da página */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    z-index: 1000; /* Garante que o footer esteja acima de outros elementos */
+}
+    </style>     
+</head>
+<body>
+    <header>
+        <h1  style="color: rgb(183, 177, 177);" > Bem vinda LoboStore</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Roupas</a></li>
+                <li><a href="#">Bolsas</a></li>
+                <li><a href="#">Perfumes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="Roupas">
+        <div class="container" id="imagens-container">
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/45b38ad8-c489-4c75-82b1-a2da40f6ac86.jpeg" alt="Produto 1">
+                    <div class="descricao">
+                        <h2>Dia Casual Branco</h2>
+                        <p>Conjunto Camisa Clássica de ombro bufante, cinto marrom médio e short temporal com costura de alfaiataria.</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/Roupas tumblr  - 📷.jpeg" alt="Produto 2">
+                    <div class="descricao">
+                        <h2>Primavera Azul </h2>
+                        <p>Conjunto Body com Babado nas alças ,estrutural(bojo), short cintura alta com listras em azul.</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/43631be0-e3f7-4b74-9301-2b849de8f68a.jpeg" alt="Produto 3">
+                    <div class="descricao">
+                        <h2>Lindissima</h2>
+                        <p>Conjunto Croped estruturado e short verde claro com bolsos e costura alfaiataria.</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/57363279-0d22-48e4-8f6b-344811986719.jpeg" alt="Produto 4">
+                    <div class="descricao">
+                        <h2>Romantica </h2>
+                        <p> Conjunto Kimono Branco com Croped Salmon floral e short jeans cintura alta com bolso. </p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+                        <button id="ver-mais" onclick="mostrarMais('Roupas')">Ver Mais</button>
+            </div>
+            <div class ="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/1ff42e8a-89b0-4795-967d-025fa26f41e1.jpeg" alt="Produto 5">
+                    <div class="descricao">
+                        <h2>Apaixonada por jeans </h2>
+                        <p> Conjunto Croped Branco estruturado (bojo) Saia Branca com detalhe plisado e Jaqueta Jeans clara decorada.</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/bde8ef28-dbfa-42b8-8a41-f168468feba9.jpeg" alt="Produto 6">
+                    <div class="descricao">
+                        <h2>Conjunto Ar Livre  </h2>
+                        <p>Conjunto de Regata areia e Short marrom e Colete.</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+            </div>  
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/1d93e382-bc0c-4c7f-a066-4394a483b516.jpeg" alt="Produto 7">
+                    <div class="descricao">
+                        <h2> Cardigam Rosa Body Branco e Short Jeans </h2>
+                        <p>Descrição do Produto 2</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="conjuntos/20d3b566-af59-416c-8a5e-06199b441e82.jpeg" alt="Produto 8">
+                    <div class="descricao">
+                        <h2>Apaixonante Rosas </h2>
+                        <p>Conjunto Body Rosas estruturado(bojo), Short acinturado rosa claro com feicho moderno.</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+
+                    </section>            
+             </section>
+            <section class="Bolsas">
+                <div class="container" id="imagens-container-bolsas">
+                    <div class="imagem">
+                        <div class="quadro">
+                <img src="bolsa/Captura de tela 2024-01-13 150756.png" alt=" Bolsa 1 ">
+                <div class="descricao">
+                    <h2>Travel soft</h2>
+                    <p>Para apaixonadas por Bolsa Nude Pequena com Alça trabalhada com detalhes dourados. 1</p>
+                    <span>R$ 99,99</span>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button>Adicionar ao Carrinho</button>
+            </div>    
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="bolsa/Captura de tela 2024-01-13 151138.png" alt=" Bolsa 2 ">
+                    <div class="descricao">
+                        <h2>Slim White</h2>
+                        <p>Para apaixonadas por Bolsa Branca com bordas arredondadas e Alça fina. 1</p>
+                        <span>R$ 99,99</span>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+               <div class="imagem"> 
+               </div class= "quadro"> 
+                  <img src="bolsa/Captura de tela 2024-01-13 151636.png" alt=" Bolsa 3 ">
+                   <div class="descricao">
+                        <h2> Blue Heart </h2>
+                        <p> Para Amantes de Bolsas quadradas e estruturadas este modelo em Azul Claro tem designer pequeno com detalhes trabalhados na abertura , com alça de mão e acompanha alça comprida fina . </p>
+                        <span>R$ 99,99</span>
+                        <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button>Adicionar ao Carrinho</button>
+                    <button id="ver-mais" onclick="mostrarMais('Bolsas')">Ver Mais</button>
+            </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="bolsa/Captura de tela 2024-01-13 151426.png" alt=" Bolsa 4 ">
+                        <div class="descricao">
+                            <h2> Lady Green </h2>
+                            <p> Este modelo é uma tendência bem marcante com detalhe único na abertura , costura com designer estruturado modelo pequeno com alça de mão , e alça fina comprida. 1</p>
+                            <span>R$ 99,99</span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button>Adicionar ao Carrinho</button>
+                        </div>
+            <div class="imagem">
+                <div class="quadro">
+                    <img src="bolsa/Captura de tela 2024-01-13 151249.png" alt=" Bolsa 5 ">
+                        <div class="descricao"> 
+                            <h2> Horus </h2>
+                            <p> Obra Prima Clássica , Nude e Branca perfeitos juntos , em um modelo quadrado média com detalhes em dourado e alça grossa e comprida .   1</p>
+                            <span>R$ 99,99</span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button>Adicionar ao Carrinho</button>
+                            </div> 
+                            <div class="imagem">
+                                <div class="quadro">
+                                    <img src="bolsa/Captura de tela 2024-01-13 151211.png" alt=" Bolsa 6 ">
+                                    <div class="descricao">
+                                        <h2> Trio Black  1</h2>
+                                        <p> TRIO de mala box para viagem , alça com fácil manuzeio , feichos digitais, travas laterais, rotação 360 graus ,10kg , 6kg , 2kg . Proteção de borracha lateral , ipermeavel e antiriscos.  1</p>
+                                        <span>R$ 999,99</span>
+                                        <select>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <button>Adicionar ao Carrinho</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </section> <!-- Fechamento da seção Bolsas -->
+                            
+                           <!--  <footer>
+                                <p>&copy; 2024 Sua Loja de Roupas. Todos os direitos reservados.</p>
+                            </footer>
+                            
+                            <script>
+                                function mostrarMais(tipo) {
+                                    var imagensOcultas = document.querySelectorAll('.' + tipo.toLowerCase() + ' .imagem:nth-child(n+5)');
+                                    imagensOcultas.forEach(function(imagem) {
+                                        imagem.style.display = 'flex';
+                                    });
+                                    document.getElementById('ver-mais-' + tipo.toLowerCase()).style.display = 'none';
+                                }
+                            </script>
+                            </body>
+                            </html>/--> 
+                            
+                        
+            
